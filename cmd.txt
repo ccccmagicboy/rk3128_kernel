@@ -1,0 +1,8 @@
+ref:http://wiki.t-firefly.com/zh_CN/Firefly-RK3128/compile_kernel.html
+sudo apt-get install build-essential lzop libncurses5-dev libssl-dev gcc-multilib mkbootimg
+
+============================================
+
+make fireprime-linux_defconfig
+make rk3128-fireprime.img
+mkbootimg --kernel arch/arm/boot/zImage --ramdisk initrd.img -o linux-boot.img
